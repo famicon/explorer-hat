@@ -5,6 +5,7 @@ import explorerhat
 def toggle_light(channel, event):
     if channel > 4:
         return
+    print channel
     if event == 'press':
         explorerhat.light[channel-1].on()
     if event == 'release':
