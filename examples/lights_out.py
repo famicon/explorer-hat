@@ -20,7 +20,9 @@ def toggle_light(channel, event):
 		else:
 			explorerhat.light[channel-2].toggle()
 			explorerhat.light[channel].toggle()
+		print 'You have taken %i moves so far. Keep going!' % num_moves
 
+print 'Press a button to toggle its LED and adjacent LEDs on/off'
 light_nums = random.sample(range(0,4), random.randint(1,4))
 
 for l in light_nums:
@@ -33,5 +35,10 @@ while len(light_nums) > 0:
 
 if len(light_nums) == 0:
 	print 'Congratulations! You won in %i moves!' % num_moves
+	explorerhat.light.stop()
+	for i in range(0,4) + range(0,3)[::-1] + range(1,4):
+		explorerhat.light[i].on()
+		time.sleep(0.25)
+		explorerhat.light[i].off()
 
 explorerhat.pause()
