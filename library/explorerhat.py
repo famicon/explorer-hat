@@ -175,9 +175,9 @@ class Motor(object):
             raise ValueError("Speed must be between 0 and 100")
             return False 
         if self._invert:
-            self.speed(-speed)
-        else:
             self.speed(speed)
+        else:
+            self.speed(-speed)
 
     def _duty_cycle(self, duty_cycle):
         if self.pwm != None:
@@ -218,6 +218,7 @@ class Motor(object):
 
     forward = forwards
     backward = backwards
+    reverse = invert
 
 ## ExplorerHAT class representing a GPIO Input
 #
@@ -640,8 +641,8 @@ try:
     settings._add(touch = CapTouchSettings())
  
     light = ObjectCollection()
-    light._add(yellow = Light(LED1))
-    light._add(blue   = Light(LED2))
+    light._add(blue   = Light(LED1))
+    light._add(yellow = Light(LED2))
     light._add(red    = Light(LED3))
     light._add(green  = Light(LED4))
     light._alias(amber = 'yellow')
