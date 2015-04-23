@@ -60,17 +60,17 @@ try:
 				time.sleep(0.1)
 		pin = []  ## Resets the list after 4 digits have been entered
 
-## Catches control-c
+## Catches control-c.
 
 except KeyboardInterrupt:
 	pass
 
-## Catches any other exceptions
+## Catches any other exceptions.
 
 except Exception:
 	pass
 
-## Clean up GPIO before exit
+## Clean up GPIO before exit.
 
 finally:
 	GPIO.cleanup()
