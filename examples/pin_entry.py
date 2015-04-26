@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 ## Imports, for time delays, controlling Explorer HAT and GPIO pin 18
 ## for the piezo buzzer.
 
