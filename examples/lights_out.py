@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+## Read the tutorial here:
+## https://github.com/sandyjmacdonald/pimoroni_learning_materials/blob/master/lights_out.md
 
 import explorerhat
 import random
