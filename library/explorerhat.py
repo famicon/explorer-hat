@@ -6,6 +6,7 @@ API library for Explorer HAT and Explorer HAT Pro, Raspberry Pi add-on boards"""
 
 import sys, time, threading, signal, atexit, captouch
 import RPi.GPIO as GPIO
+import plugins
 from pins import ObjectCollection, AsyncWorker, StoppableThread
 
 explorer_pro = False

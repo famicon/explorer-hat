@@ -43,6 +43,6 @@ setup(name		= 'ExplorerHAT',
 	keywords	= 'Raspberry Pi Explorer HAT',
 	url		= 'http://shop.pimoroni.com',
 	classifiers     = classifiers,
-	py_modules	= ['explorerhat','pins','captouch','analog'],
+	py_modules	= ['explorerhat','pins','captouch','analog','plugins'],
 	install_requires= ['rpi.gpio >= 0.5.10']
 )
