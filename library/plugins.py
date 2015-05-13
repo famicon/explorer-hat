@@ -1,11 +1,11 @@
 import time
-import explorerhat as eh
+import explorerhat
 
 class ShiftRegister:
 	def __init__(self):
-		self.rclk = eh.output.one
-		self.srclk = eh.output.two
-		self.ser = eh.output.three
+		self.rclk = explorerhat.output.one
+		self.srclk = explorerhat.output.two
+		self.ser = explorerhat.output.three
 
 	def toggle_pin(self, pin, state):
 		self.rclk.on()
