@@ -3,8 +3,8 @@ import explorerhat
 
 class ShiftRegister:
 	def __init__(self):
-		self.rclk = explorerhat.output.one
-		self.srclk = explorerhat.output.two
+		self.srclk = explorerhat.output.one
+		self.rclk = explorerhat.output.two
 		self.ser = explorerhat.output.three
 
 	def toggle_pin(self, pin, state):
